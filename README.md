@@ -1,6 +1,3 @@
-Here is the content of the `README.md` in markdown format:
-
-```markdown
 # TruthByte
 
 **TruthByte** is a simple and efficient command-line tool for verifying file integrity by comparing hashes. It supports multiple hash algorithms (SHA256, SHA1, MD5, and SHA512) and provides easy-to-understand feedback on whether the file's hash matches the expected value.
