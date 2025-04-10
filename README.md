@@ -23,12 +23,13 @@
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/truthbyte
+   git clone https://github.com/Opu-H/truthbyrte.git
    cd truthbyte
    ```
 
 2. Run the installation script:
    ```bash
+    sudo chmod +x install.sh
    ./install.sh
    ```
 
@@ -86,21 +87,6 @@ man truthbyte
 
 ---
 
-## License
-
-MIT License
-
----
-
-## Author
-
-Salman
-
----
-
 ## Contributing
 
 Feel free to fork the repository and submit pull requests for any improvements or fixes.
-```
-
-You can copy and paste this into a `README.md` file for your project. Let me know if you need any further adjustments!
