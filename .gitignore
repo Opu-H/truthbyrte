@@ -1,32 +1,3 @@
 # Ignore all .deb files
 *.deb
 
-# Ignore node_modules (if applicable)
-node_modules/
-
-# Ignore Python bytecode
-__pycache__/
-*.pyc
-*.pyo
-
-# Ignore editor-specific files
-.vscode/
-.idea/
-
-# Ignore OS-specific files
-.DS_Store
-Thumbs.db
-
-# Ignore logs and temp files
-*.log
-*.tmp
-*.swp
-
-# Ignore build artifacts and folders
-/dist/
-/build/
-
-# Ignore other common temporary files
-*.bak
-*.swp
-*.swo

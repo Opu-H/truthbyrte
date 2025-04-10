@@ -56,7 +56,7 @@ show_version() {
 # === Upgrade mechanism ===
 upgrade_tool() {
     echo "📡 Downloading latest version..."
-    sudo curl -s -L https://github.com/Opu-H/truthbyrte/releases/download/v1.0.0/truthbyte.sh -o /usr/local/bin/truthbyte
+    sudo curl -s -L https://github.com/Opu-H/truthbyrte/releases/download/v1.0-1/truthbyte.sh -o /usr/local/bin/truthbyte
     sudo chmod +x /usr/local/bin/truthbyte
     echo "✅ Upgrade complete!"
     exit 0
