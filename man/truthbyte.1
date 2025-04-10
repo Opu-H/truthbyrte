@@ -1,0 +1,39 @@
+.TH TRUTHBYTE 1 "April 2025" "TruthByte 1.0" "File Hash Verifier"
+
+.SH NAME
+truthbyte \- a CLI tool to verify file integrity using hash algorithms.
+
+.SH SYNOPSIS
+.B truthbyte
+[\-P <full_path_to_file> | \-N <filename_in_current_dir>] \-a <algorithm> \-h <expected_hash>
+
+.SH DESCRIPTION
+TruthByte calculates the hash of a specified file and compares it to a provided hash.
+
+.SH OPTIONS
+.TP
+.B \-P <path>
+Provide full file path. Example: -P ~/Downloads/file.iso
+
+.TP
+.B \-N <name>
+Provide filename from current working directory.
+
+.TP
+.B \-a <algorithm>
+Specify hash algorithm: sha256, sha1, sha512, md5
+
+.TP
+.B \-h <hash>
+Provide the expected hash value to compare.
+
+.SH EXAMPLES
+.nf
+truthbyte -P ~/file.iso -a sha256 -h d2d2d2d2...
+truthbyte -N file.iso -a md5 -h abcdef123456...
+
+.SH AUTHOR
+Written by Salman
+
+.SH SEE ALSO
+sha256sum(1), md5sum(1)
