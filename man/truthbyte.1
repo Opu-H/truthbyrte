@@ -1,39 +1,61 @@
-.TH TRUTHBYTE 1 "April 2025" "TruthByte 1.0" "File Hash Verifier"
+.TH TRUTHBYTE 1 "April 2025" "TruthByte 1.0.0" "File Hash Verifier"
 
 .SH NAME
 truthbyte \- a CLI tool to verify file integrity using hash algorithms.
 
 .SH SYNOPSIS
 .B truthbyte
-[\-P <full_path_to_file> | \-N <filename_in_current_dir>] \-a <algorithm> \-h <expected_hash>
+[\-P <full_path_to_file> | \-N <filename_in_current_dir>] \-a <algorithm> \-h <expected_hash]
+.br
+.B truthbyte --help
+.br
+.B truthbyte --version
+.br
+.B truthbyte --upgrade
 
 .SH DESCRIPTION
-TruthByte calculates the hash of a specified file and compares it to a provided hash.
+TruthByte calculates the hash of a specified file and compares it to a provided hash.  
+It supports common algorithms and helps verify file integrity with a simple command-line interface.
 
 .SH OPTIONS
 .TP
 .B \-P <path>
-Provide full file path. Example: -P ~/Downloads/file.iso
+Provide full file path. Example: \fB-P ~/Downloads/file.iso\fR
 
 .TP
 .B \-N <name>
-Provide filename from current working directory.
+Provide filename from current working directory. Example: \fB-N file.iso\fR
 
 .TP
 .B \-a <algorithm>
-Specify hash algorithm: sha256, sha1, sha512, md5
+Specify hash algorithm. Supported values: \fBsha256\fR, \fBsha1\fR, \fBsha512\fR, \fBmd5\fR
 
 .TP
 .B \-h <hash>
 Provide the expected hash value to compare.
 
+.TP
+.B --help
+Display help and usage information.
+
+.TP
+.B --version
+Display the current version of TruthByte.
+
+.TP
+.B --upgrade
+Automatically upgrade TruthByte to the latest version.
+
 .SH EXAMPLES
 .nf
 truthbyte -P ~/file.iso -a sha256 -h d2d2d2d2...
 truthbyte -N file.iso -a md5 -h abcdef123456...
+truthbyte --help
+truthbyte --version
+truthbyte --upgrade
 
 .SH AUTHOR
 Written by Salman
 
 .SH SEE ALSO
-sha256sum(1), md5sum(1)
+sha256sum(1), md5sum(1), sha1sum(1), sha512sum(1)
