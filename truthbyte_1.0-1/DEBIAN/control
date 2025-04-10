@@ -1,0 +1,6 @@
+Package: truthbyte
+Version: 1.0-1
+Architecture: all
+Depends: coreutils
+Maintainer: Salman Hossain <opu.hossain.data@gmail.com>
+Description: TruthByte - A CLI tool to verify file integrity using hash algorithms

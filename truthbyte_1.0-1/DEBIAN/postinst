@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e
+
+# Colors
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+echo -e "${GREEN}Installing TruthByte...${NC}"
+
+# Check if TruthByte is already installed
+if [ -f "/usr/local/bin/truthbyte" ]; then
+    echo "📄 TruthByte already exists, updating..."
+else
+    echo "🆕 Installing TruthByte for the first time..."
+fi
+
+# Add alias to relevant shell configuration files
+for file in "/root/.bashrc" "/root/.zshrc" "/root/.profile" "/root/.bash_profile"; do
+    if ! grep -q "alias tb=truthbyte" "$file" 2>/dev/null; then
+        echo "alias tb=truthbyte" >> "$file"
+    fi
+done
+
+# Optional: Source the relevant shell config for the current session (if applicable)
+if [ -n "$ZSH_VERSION" ]; then
+    source "$HOME/.zshrc"
+elif [ -n "$BASH_VERSION" ]; then
+    source "$HOME/.bashrc"
+fi
+
+echo -e "${GREEN}✅ TruthByte installed successfully!"
