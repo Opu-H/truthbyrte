@@ -1,3 +1,28 @@
 # Ignore all .deb files
 *.deb
 
+# Ignore test files and directories
+test/
+tests/
+*_test.*
+*.test.*
+test_*.*
+*.test
+test-results/
+test_output/
+
+# Ignore temporary test files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Ignore hash files that might be created during testing
+*.md5
+*.sha1
+*.sha256
+*.sha512
+
+# Ignore verification output files
+verification_*.txt
+*_verification.txt
